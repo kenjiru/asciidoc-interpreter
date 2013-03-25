@@ -1,5 +1,4 @@
-Document title
-==============
+= Document title
 
 Preamble is between the document header and the first section title.
 
