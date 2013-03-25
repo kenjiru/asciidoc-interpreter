@@ -1,35 +1,42 @@
-module Tree {
-    export enum NodeType {
-        DOCUMENT,
-        HEADER,
-        TITLE
+export enum NodeType {
+    DOCUMENT,
+    HEADER,
+    TITLE
+}
+
+interface AttributeMap {
+    [name: string] : string;
+}
+
+export class Node {
+    private type: NodeType;
+    private attributes: AttributeMap = {};
+
+    constructor(type: NodeType) {
+        this.type = type;
     }
 
-    interface AttributeMap {
-        [name: string] : string;
+    public setAttribute(name: string, value: string) {
+        this.attributes[name] = value;
     }
 
-    export class Node {
-        private attributes: AttributeMap;
-
-        constructor(public type) {
-
-        }
-
-        public setAttribute(name: string, value: string) {
-            this.attributes[name] = value;
-        }
-
-        public getAttribute(name) {
-            return this.attributes[name] || null;
-        }
+    public getAttribute(name) {
+        return this.attributes[name] || null;
     }
 
-    export class ListNode extends Node {
-        private children: Node[] = [];
+    public toString() {
+        return NodeType._map[this.type];
+    }
+}
 
-        public addChild(node: Node) {
-            this.children.push(node);
-        }
+export class ListNode extends Node {
+    private children: Node[] = [];
+
+    public addChild(node: Node) {
+        this.children.push(node);
+    }
+
+    public getChildren() {
+        return this.children;
     }
 }
