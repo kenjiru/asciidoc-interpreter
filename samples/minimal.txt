@@ -1,5 +1,7 @@
-Main Header
-===========
+Document title
+==============
+
+Preamble is between the document header and the first section title.
 
 == Level 1 Header
 
