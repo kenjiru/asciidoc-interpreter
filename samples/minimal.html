@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Asciidoc document</title>
+</head>
+
+<body>
+
+<div class="sect1">
+    <h2 id="_paragraphs_and_blocks">Paragraphs and Blocks</h2>
+
+    <div class="sectionbody">
+        <div class="paragraph"><p>Simple paragraph.</p></div>
+        <div class="paragraph">
+            <div class="title">Paragraph title</div>
+            <p>Paragraph with title.</p></div>
+        <div class="sect2">
+            <h3 id="_special_blocks">Special blocks</h3>
+
+            <div class="listingblock">
+                <div class="content">
+                    <div class="highlight">
+                        <pre>
+                            <span class="nb">die</span> <span class="s">'connect: '</span>
+                            <span class="o">.</span><span class="nv">$dbh</span><span class="o">-&gt;</span><span class="n">errstr</span>
+                            <span class="p">;</span>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="admonitionblock">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td class="icon">
+                            <div class="title">Note</div>
+                        </td>
+                        <td class="content">
+                            <div class="title">Optional Title</div>
+                            This is an example
+                            single-paragraph note.
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="admonitionblock">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td class="icon">
+                            <div class="title">Tip</div>
+                        </td>
+                        <td class="content">Tip.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="admonitionblock">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td class="icon">
+                            <div class="title">Important</div>
+                        </td>
+                        <td class="content">Important.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="admonitionblock">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td class="icon">
+                            <div class="title">Warning</div>
+                        </td>
+                        <td class="content">Warning.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="admonitionblock">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td class="icon">
+                            <div class="title">Caution</div>
+                        </td>
+                        <td class="content">Caution.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="sect2">
+            <h3 id="_blocks">Blocks</h3>
+
+            <div class="listingblock">
+                <div class="title">Optional Title</div>
+                <div class="content">
+    <pre><tt>*Listing* Block
+
+    Use: code or file listings</tt></pre>
+                </div>
+            </div>
+            <div class="listingblock">
+                <div class="title">Source block</div>
+                <div class="content">
+                    <div class="highlight">
+                        <pre>
+                            <span class="c1"># Use: highlight code listings</span>
+                            <span class="c1"># (require `source-highlight` or `pygmentize`)</span>
+                            <span class="k">use</span> <span class="n">DBI</span><span class="p">;</span>
+                            <span class="k">my</span> <span class="nv">$dbh</span> <span class="o">=</span> <span class="n">DBI</span>
+                            <span class="o">-&gt;</span><span class="nb">connect</span><span class="p">(</span>
+                            <span class="s">'...'</span><span class="p">,</span><span class="nv">$u</span><span class="p">,</span>
+                            <span class="nv">$p</span><span class="p">)</span>
+                            <span class="ow">or</span> <span class="nb">die</span>
+                            <span class="s">"connect: $dbh-&gt;errstr"</span>
+                            <span class="p">;</span>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="exampleblock">
+                <div class="title">Example 1. Example Block</div>
+                <div class="content">
+                    <div class="paragraph"><p><strong>Example</strong> Block</p></div>
+                    <div class="paragraph"><p>Use: examples :)</p></div>
+                </div>
+            </div>
+            <div class="quoteblock">
+                <div class="title">Optional Title</div>
+                <div class="content">
+                    <div class="paragraph"><p><strong>Quote</strong> Block</p></div>
+                    <div class="paragraph"><p>Use: cite somebody</p></div>
+                </div>
+                <div class="attribution">
+                    <em>cite source</em><br>
+                    — cite author
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sect1">
+    <h2 id="_text_styles">Text styles</h2>
+
+    <div class="sectionbody">
+        <div class="paragraph"><p>forced<br>
+            line break</p></div>
+        <div class="paragraph"><p>normal, <em>italic</em>, <strong>bold</strong>, <tt>mono</tt>.</p></div>
+        <div class="paragraph"><p>“double quoted”, ‘single quoted’.</p></div>
+        <div class="paragraph"><p>normal, <sup>super</sup>, <sub>sub</sub>.</p></div>
+        <div class="paragraph"><p>Command: <tt>ls -al</tt></p></div>
+        <div class="paragraph"><p><tt>mono <strong>bold</strong></tt></p></div>
+        <div class="paragraph"><p>Path: <em>/some/filez.txt</em>, <em>.b</em></p></div>
+    </div>
+</div>
+<div class="sect1">
+    <h2 id="_lists">Lists</h2>
+
+    <div class="sectionbody">
+    </div>
+</div>
+<div class="sect1">
+    <h2 id="_tables">Tables</h2>
+
+    <div class="sectionbody">
+    </div>
+</div>
+
+</body>
+</html>
